@@ -1,21 +1,2 @@
 #!/bin/bash
-
-# Get the input string
-input="$1"
-
-# Initialize the decoded message
-decoded_message=""
-
-# Split the input string into lines
-lines=($input)
-
-# Iterate over the lines and add the first letter of each line to the decoded message
-for line in "${lines[@]}"; do
-  decoded_message+="${line:0:1}"
-done
-
-# Append a newline to the decoded message
-decoded_message+="\n"
-
-# Print the decoded message
-echo "$decoded_message"
+cut -c 1 | paste -s -d ''
