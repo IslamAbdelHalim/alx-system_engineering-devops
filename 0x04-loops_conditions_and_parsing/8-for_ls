@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# display the content of the current dirctory
+for file in *
+do
+	if [ -f "$file" ]; then
+		name_file=$(echo "$file" | cut -d'-' -f2-)
+		echo "$name_file"
+	fi
+done
