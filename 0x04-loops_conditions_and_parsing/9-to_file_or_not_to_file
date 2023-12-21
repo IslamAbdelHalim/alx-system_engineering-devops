@@ -3,11 +3,13 @@
 file="school"
 if [[ -e $file ]];then
 	echo "school file exists"
+
 	if [[ -n $file ]];then
 		echo "school file is empty"
 	elif [[ -z $file ]];then
 		echo "school file is not empty"
-	elif [[ -f $file ]];then
+	fi
+	if [[ -f $file ]];then
 		echo "school file is a regular file"
 	fi
 else
