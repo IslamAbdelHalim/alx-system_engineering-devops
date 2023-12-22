@@ -2,7 +2,7 @@
 # Bash script that displays:
 cleanup()
 {
-	echo "I am invinvible!!!"
+	echo "I am invincible!!!"
 }
 trap cleanup SIGTERM
 while true;
