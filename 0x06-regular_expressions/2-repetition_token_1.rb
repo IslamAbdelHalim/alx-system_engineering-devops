@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 #Define the Pattern
-redex = /hb*tn/
+redex = /hb{0,3}tn/
 
 #Take the input
 input = ARGV[0]
