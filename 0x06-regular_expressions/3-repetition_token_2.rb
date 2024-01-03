@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 #Define the Pattern
-redex = /hbt{1,4}n/
+redex = /hbt*n/
 
 #Take the input
 input = ARGV[0]
