@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# a Bash script configures an ubuntu
+
+cp /etc/hosts ~/hosts_copy
+
+echo "127.0.0.2		localhost" > ~/hosts_copy
+echo "8.8.8.8		facebook.com" >> ~/hosts_copy
+
+cp ~/hosts_copy /etc/hosts
