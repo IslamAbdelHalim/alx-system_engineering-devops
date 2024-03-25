@@ -13,7 +13,7 @@ if __name__ == "__main__":
     user_todo = requests.get(
             "https://jsonplaceholder.typicode.com/todos/")
 
-    employee_name = req_user.json().get("username")
+    employee_name = req_user.json().get("name")
     number_tasks = 0
     total_tasks = 0
 
