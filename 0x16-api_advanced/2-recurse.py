@@ -3,17 +3,19 @@
 
 import requests
 
+
 def recurse(subreddit, hot_list=[], after=''):
     """Recursive function that queries Reddit API and returns a list"""
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {'User-Agent': 'Mozilla/5.0'}
 
-    data = requests.get(url, headers=headers, params={"limit": 100, "after":after})
+    data = requests.get(url, headers=headers,
+                        params={"limit": 100, "after": after})
 
     if data.status_code != 200:
         return None
-    
+
     posts = data.json().get("data").get("children")
 
     if posts:
