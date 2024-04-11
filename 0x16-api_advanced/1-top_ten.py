@@ -8,7 +8,9 @@ def top_ten(subreddit):
     """function that print the titles and top10"""
     url = "https://www.reddit.com/r/{}/top.json".format(subreddit)
 
-    data = requests.get(url, params={"limit": 10})
+    headers = {'User-Agent': 'Mozilla/5.0'}
+
+    data = requests.get(url, headers=headers, params={"limit": 10})
 
     if data.status_code != 200:
         print(None)
