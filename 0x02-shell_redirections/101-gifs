@@ -1,2 +1,9 @@
 #!/bin/bash
-find -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d '.' -f 2- | rev | Lc_ALL=C sort -f
+
+find . -type f -name "*.gif" | while read -r file; do
+	filename=$(basename "$file")
+	filename_no_ext="${filename%.*}"
+	echo "$filename_no_ext"
+done | sort -f
+
+echo
